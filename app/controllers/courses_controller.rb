@@ -27,6 +27,13 @@ class CoursesController < ApplicationController
   end
 
   def schedule
+    @ignore = "not ignoring prerequisites"
+    @ignore_flag = false
+    ignore = params[:ignore]
+    if !ignore.nil?
+      @ignore = "ignoring prerequisites"
+      @ignore_flag = true
+    end
     @recommended_EECS_courses = @user.recommended_EECS_courses
     @fall_length = @recommended_EECS_courses[:possible_fall].length + @recommended_EECS_courses[:backup_fall].length
     @spring_length = @recommended_EECS_courses[:possible_spring].length + @recommended_EECS_courses[:backup_spring].length

@@ -116,6 +116,16 @@
           %i.material-icons.small.animated-slow.tada.infinite arrow_drop_down
   .row
     .col.s12
+      .card.white
+        .text #{@ignore}
+        - if @ignore_flag
+          %a{:href => "/courses/schedule"}
+            Dont Ignore Prerequisites
+        - else
+          %a{:href => "/courses/schedule?ignore=true"}
+            Ignore Prerequisites
+  .row
+    .col.s12
       .card.white.medium
         .card-content.scrollable
           %span.card-title Recommended Fall 2016 Non-EECS Courses Taught by Distinguished Professors
