@@ -34,7 +34,8 @@
                         = link_to(professor.name, professor_path(professor.id)) + ", "
                   %td 
                     - if @dist_eecs_profs.include?(professor)
-                        %img(:src => 'http://www.trfradio.com/files/2016/09/excellence-award.png', :width => 10, :height => 10)
+                       %image_tag("http://www.trfradio.com/files/2016/09/excellence-award.png", height: 50, width:50 )
+                        //%img(:src => 'http://www.trfradio.com/files/2016/09/excellence-award.png', :width => 10, :height => 10)
                   %td= course[2]
                   %td.vertical-align
                     %input{type: "checkbox", class: "filled-in takenBox", id: "add-#{course[0].number}", name: "taking_classes[#{course[0].number}: #{course[0].title}]"}
