@@ -33,7 +33,7 @@
                       - else
                         = link_to(professor.name, professor_path(professor.id)) + ", "
                   %td 
-                    - if professor in @dist_eecs_profs
+                    - if @dist_eecs_profs.include?(professor)
                         %img(:src => 'http://www.trfradio.com/files/2016/09/excellence-award.png', :width => 10, :height => 10)
                   %td= course[2]
                   %td.vertical-align
