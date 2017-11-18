@@ -1,0 +1,90 @@
+{
+    "Haas Arts and Literature": {
+        "category": "haas", 
+        "id": "14089"
+    }, 
+    "Historical Studies": {
+        "category": "ls", 
+        "id": "14080"
+    }, 
+    "Physical Science": {
+        "category": "ls", 
+        "id": "14083"
+    }, 
+    "Haas Social and Behavioral Sciences": {
+        "category": "haas", 
+        "id": "14094"
+    }, 
+    "American History": {
+        "category": "university", 
+        "id": "14096"
+    }, 
+    "Quantitative Reasoning": {
+        "category": "university", 
+        "id": "14098"
+    }, 
+    "American Institutions": {
+        "category": "university", 
+        "id": "14097"
+    }, 
+    "Haas Physical Science": {
+        "category": "haas", 
+        "id": "14093"
+    }, 
+    "Arts and Literature": {
+        "category": "ls", 
+        "id": "14079"
+    }, 
+    "College Writing": {
+        "category": "university", 
+        "id": "14099"
+    }, 
+    "Social and Behavioral Sciences": {
+        "category": "ls", 
+        "id": "14084"
+    }, 
+    "Philosophy and Values": {
+        "category": "ls", 
+        "id": "14082"
+    }, 
+    "Haas Philosophy and Values": {
+        "category": "haas", 
+        "id": "14092"
+    }, 
+    "Humanities and Social Sciences": {
+        "category": "engineering", 
+        "id": "14085"
+    }, 
+    "Haas International Studies": {
+        "category": "haas", 
+        "id": "14091"
+    }, 
+    "Biological Sciences": {
+        "category": "ls", 
+        "id": "14078"
+    }, 
+    "Haas Biological Sciences": {
+        "category": "haas", 
+        "id": "14088"
+    }, 
+    "Reading and Composition A": {
+        "category": "university", 
+        "id": "14086"
+    }, 
+    "Reading and Composition B": {
+        "category": "university", 
+        "id": "14087"
+    }, 
+    "American Cultures": {
+        "category": "university", 
+        "id": "14095"
+    }, 
+    "Haas Historical Studies": {
+        "category": "haas", 
+        "id": "14090"
+    }, 
+    "International Studies": {
+        "category": "ls", 
+        "id": "14081"
+    }
+}

@@ -12,6 +12,13 @@ Given /the following professors exist/ do |prof_table|
   end
 end
 
+Given /the following professors, without ratings, exist/ do |prof_table|
+  num_profs = 0
+  prof_table.hashes.each do |prof|
+    p = Professor.create(prof)
+  end
+end
+
 num_courses = 0
 Given /the following courses exist/ do |course_table|
   num_courses = 0
@@ -125,4 +132,9 @@ end
 Then(/^"([^"]*)" should not be checked$/) do |arg1|
   my_box = find(arg1)
   expect(my_box).to_not be_checked  # Rspec 2.11
+end
+
+### NEW 
+Then(/^I should see ignore in the url$/) do
+  expect(page).to have_current_path(schedule_courses_path(ignore: 'true'))
 end

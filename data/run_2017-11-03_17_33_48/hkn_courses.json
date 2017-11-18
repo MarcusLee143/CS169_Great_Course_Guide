@@ -1,0 +1,998 @@
+{
+    "ee_courses": [
+        {
+            "name": "144", 
+            "type_id": 13, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 253, 
+                    "is_recommended": false, 
+                    "id": 32, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/144", 
+            "id": 253, 
+            "department_id": 1
+        }, 
+        {
+            "name": "130", 
+            "type_id": 8, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 108, 
+                    "is_recommended": true, 
+                    "id": 53, 
+                    "prereq_id": 91
+                }, 
+                {
+                    "course_id": 108, 
+                    "is_recommended": false, 
+                    "id": 36, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/130", 
+            "id": 108, 
+            "department_id": 1
+        }, 
+        {
+            "name": "134", 
+            "type_id": 8, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 111, 
+                    "is_recommended": false, 
+                    "id": 37, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/134", 
+            "id": 111, 
+            "department_id": 1
+        }, 
+        {
+            "name": "143", 
+            "type_id": 8, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 117, 
+                    "is_recommended": false, 
+                    "id": 38, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/143", 
+            "id": 117, 
+            "department_id": 1
+        }, 
+        {
+            "name": "140", 
+            "type_id": 7, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 114, 
+                    "is_recommended": false, 
+                    "id": 41, 
+                    "prereq_id": 91
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/140", 
+            "id": 114, 
+            "department_id": 1
+        }, 
+        {
+            "name": "113", 
+            "type_id": 11, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 94, 
+                    "is_recommended": false, 
+                    "id": 43, 
+                    "prereq_id": 91
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/113", 
+            "id": 94, 
+            "department_id": 1
+        }, 
+        {
+            "name": "142", 
+            "type_id": 7, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 116, 
+                    "is_recommended": false, 
+                    "id": 45, 
+                    "prereq_id": 114
+                }, 
+                {
+                    "course_id": 116, 
+                    "is_recommended": true, 
+                    "id": 54, 
+                    "prereq_id": 223
+                }, 
+                {
+                    "course_id": 116, 
+                    "is_recommended": false, 
+                    "id": 44, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/142", 
+            "id": 116, 
+            "department_id": 1
+        }, 
+        {
+            "name": "122", 
+            "type_id": 12, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [], 
+            "link": "/coursesurveys/course/EE/122", 
+            "id": 101, 
+            "department_id": 1
+        }, 
+        {
+            "name": "123", 
+            "type_id": 12, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 102, 
+                    "is_recommended": false, 
+                    "id": 47, 
+                    "prereq_id": 99
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/123", 
+            "id": 102, 
+            "department_id": 1
+        }, 
+        {
+            "name": "192", 
+            "type_id": 13, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 125, 
+                    "is_recommended": false, 
+                    "id": 52, 
+                    "prereq_id": 99
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/192", 
+            "id": 125, 
+            "department_id": 1
+        }, 
+        {
+            "name": "118", 
+            "type_id": 9, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [], 
+            "link": "/coursesurveys/course/EE/118", 
+            "id": 98, 
+            "department_id": 1
+        }, 
+        {
+            "name": "137A", 
+            "type_id": 11, 
+            "bias_x": -10, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 381, 
+                    "is_recommended": false, 
+                    "id": 57, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/137A", 
+            "id": 381, 
+            "department_id": 1
+        }, 
+        {
+            "name": "117", 
+            "type_id": 11, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 223, 
+                    "is_recommended": false, 
+                    "id": 35, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/117", 
+            "id": 223, 
+            "department_id": 1
+        }, 
+        {
+            "name": "128", 
+            "type_id": 13, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [], 
+            "link": "/coursesurveys/course/EE/128", 
+            "id": 106, 
+            "department_id": 1
+        }, 
+        {
+            "name": "145L", 
+            "type_id": 13, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [], 
+            "link": "/coursesurveys/course/EE/145L", 
+            "id": 120, 
+            "department_id": 1
+        }, 
+        {
+            "name": "16B", 
+            "type_id": 14, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 1.0, 
+            "prereqs": [
+                {
+                    "course_id": 429, 
+                    "is_recommended": false, 
+                    "id": 56, 
+                    "prereq_id": 421
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/16B", 
+            "id": 429, 
+            "department_id": 1
+        }, 
+        {
+            "name": "16A", 
+            "type_id": 14, 
+            "bias_x": -100, 
+            "bias_y": -20, 
+            "depth": 1.0, 
+            "prereqs": [], 
+            "link": "/coursesurveys/course/EE/16A", 
+            "id": 421, 
+            "department_id": 1
+        }, 
+        {
+            "name": "137B", 
+            "type_id": 11, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 387, 
+                    "is_recommended": false, 
+                    "id": 40, 
+                    "prereq_id": 381
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/137B", 
+            "id": 387, 
+            "department_id": 1
+        }, 
+        {
+            "name": "C106A", 
+            "type_id": 13, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 433, 
+                    "is_recommended": false, 
+                    "id": 64, 
+                    "prereq_id": 99
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/C106A", 
+            "id": 433, 
+            "department_id": 1
+        }, 
+        {
+            "name": "C106B", 
+            "type_id": 13, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 443, 
+                    "is_recommended": false, 
+                    "id": 65, 
+                    "prereq_id": 433
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/C106B", 
+            "id": 443, 
+            "department_id": 1
+        }, 
+        {
+            "name": "149", 
+            "type_id": 13, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 291, 
+                    "is_recommended": false, 
+                    "id": 61, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/149", 
+            "id": 291, 
+            "department_id": 1
+        }, 
+        {
+            "name": "147", 
+            "type_id": 8, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 2.5, 
+            "prereqs": [
+                {
+                    "course_id": 123, 
+                    "is_recommended": false, 
+                    "id": 62, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/147", 
+            "id": 123, 
+            "department_id": 1
+        }, 
+        {
+            "name": "127", 
+            "type_id": 12, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [], 
+            "link": "/coursesurveys/course/EE/127", 
+            "id": 290, 
+            "department_id": 1
+        }, 
+        {
+            "name": "120", 
+            "type_id": 12, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 99, 
+                    "is_recommended": false, 
+                    "id": 29, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/120", 
+            "id": 99, 
+            "department_id": 1
+        }, 
+        {
+            "name": "145B", 
+            "type_id": 12, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 119, 
+                    "is_recommended": false, 
+                    "id": 55, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/145B", 
+            "id": 119, 
+            "department_id": 1
+        }, 
+        {
+            "name": "126", 
+            "type_id": 12, 
+            "bias_x": 40, 
+            "bias_y": 0, 
+            "depth": 2.5, 
+            "prereqs": [
+                {
+                    "course_id": 105, 
+                    "is_recommended": false, 
+                    "id": 28, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/126", 
+            "id": 105, 
+            "department_id": 1
+        }, 
+        {
+            "name": "121", 
+            "type_id": 12, 
+            "bias_x": -50, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 100, 
+                    "is_recommended": false, 
+                    "id": 46, 
+                    "prereq_id": 99
+                }, 
+                {
+                    "course_id": 100, 
+                    "is_recommended": false, 
+                    "id": 51, 
+                    "prereq_id": 105
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/121", 
+            "id": 100, 
+            "department_id": 1
+        }, 
+        {
+            "name": "105", 
+            "type_id": 7, 
+            "bias_x": 50, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 91, 
+                    "is_recommended": false, 
+                    "id": 34, 
+                    "prereq_id": 429
+                }
+            ], 
+            "link": "/coursesurveys/course/EE/105", 
+            "id": 91, 
+            "department_id": 1
+        }
+    ], 
+    "types": [
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.5, 
+            "id": 1, 
+            "color": "#E57373", 
+            "name": "core"
+        }, 
+        {
+            "chart_pref_y": -0.2, 
+            "chart_pref_x": 1.0, 
+            "id": 2, 
+            "color": "#FFF176", 
+            "name": "hardware"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.5, 
+            "id": 3, 
+            "color": "#90CAF9", 
+            "name": "software"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.8, 
+            "id": 4, 
+            "color": "#80CBC4", 
+            "name": "theory"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.0, 
+            "id": 5, 
+            "color": "#CE93D8", 
+            "name": "applications"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.5, 
+            "id": 6, 
+            "color": "#E57373", 
+            "name": "core"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.6, 
+            "id": 9, 
+            "color": "#80CBC4", 
+            "name": "optics"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.5, 
+            "id": 10, 
+            "color": "#CE93D8", 
+            "name": "bioelectronics"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.5, 
+            "id": 14, 
+            "color": "#E0E0E0", 
+            "name": "required"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 1.0, 
+            "id": 8, 
+            "color": "#90CAF9", 
+            "name": "devices"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.3, 
+            "id": 12, 
+            "color": "#80DEEA", 
+            "name": "signals"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.0, 
+            "id": 13, 
+            "color": "#FFCC80", 
+            "name": "robotics"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.5, 
+            "id": 11, 
+            "color": "#9FA8DA", 
+            "name": "power"
+        }, 
+        {
+            "chart_pref_y": 0.0, 
+            "chart_pref_x": 0.8, 
+            "id": 7, 
+            "color": "#FFF176", 
+            "name": "circuits"
+        }
+    ], 
+    "cs_courses": [
+        {
+            "name": "61A", 
+            "type_id": 1, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 1.0, 
+            "prereqs": [], 
+            "link": "/coursesurveys/course/CS/61A", 
+            "id": 74, 
+            "department_id": 2
+        }, 
+        {
+            "name": "61B", 
+            "type_id": 1, 
+            "bias_x": -50, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 75, 
+                    "is_recommended": false, 
+                    "id": 1, 
+                    "prereq_id": 74
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/61B", 
+            "id": 75, 
+            "department_id": 2
+        }, 
+        {
+            "name": "61C", 
+            "type_id": 1, 
+            "bias_x": 50, 
+            "bias_y": 0, 
+            "depth": 2.0, 
+            "prereqs": [
+                {
+                    "course_id": 76, 
+                    "is_recommended": false, 
+                    "id": 2, 
+                    "prereq_id": 74
+                }, 
+                {
+                    "course_id": 76, 
+                    "is_recommended": true, 
+                    "id": 60, 
+                    "prereq_id": 75
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/61C", 
+            "id": 76, 
+            "department_id": 2
+        }, 
+        {
+            "name": "70", 
+            "type_id": 1, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 5.0, 
+            "prereqs": [], 
+            "link": "/coursesurveys/course/CS/70", 
+            "id": 77, 
+            "department_id": 2
+        }, 
+        {
+            "name": "160", 
+            "type_id": 3, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 3, 
+                    "is_recommended": false, 
+                    "id": 5, 
+                    "prereq_id": 75
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/160", 
+            "id": 3, 
+            "department_id": 2
+        }, 
+        {
+            "name": "161", 
+            "type_id": 3, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 287, 
+                    "is_recommended": false, 
+                    "id": 6, 
+                    "prereq_id": 76
+                }, 
+                {
+                    "course_id": 287, 
+                    "is_recommended": false, 
+                    "id": 7, 
+                    "prereq_id": 77
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/161", 
+            "id": 287, 
+            "department_id": 2
+        }, 
+        {
+            "name": "162", 
+            "type_id": 3, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 4, 
+                    "is_recommended": false, 
+                    "id": 8, 
+                    "prereq_id": 75
+                }, 
+                {
+                    "course_id": 4, 
+                    "is_recommended": false, 
+                    "id": 9, 
+                    "prereq_id": 76
+                }, 
+                {
+                    "course_id": 4, 
+                    "is_recommended": false, 
+                    "id": 10, 
+                    "prereq_id": 77
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/162", 
+            "id": 4, 
+            "department_id": 2
+        }, 
+        {
+            "name": "164", 
+            "type_id": 3, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 5, 
+                    "is_recommended": false, 
+                    "id": 11, 
+                    "prereq_id": 75
+                }, 
+                {
+                    "course_id": 5, 
+                    "is_recommended": false, 
+                    "id": 12, 
+                    "prereq_id": 76
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/164", 
+            "id": 5, 
+            "department_id": 2
+        }, 
+        {
+            "name": "169", 
+            "type_id": 3, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 6, 
+                    "is_recommended": false, 
+                    "id": 13, 
+                    "prereq_id": 75
+                }, 
+                {
+                    "course_id": 6, 
+                    "is_recommended": false, 
+                    "id": 14, 
+                    "prereq_id": 76
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/169", 
+            "id": 6, 
+            "department_id": 2
+        }, 
+        {
+            "name": "170", 
+            "type_id": 4, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 7, 
+                    "is_recommended": false, 
+                    "id": 16, 
+                    "prereq_id": 75
+                }, 
+                {
+                    "course_id": 7, 
+                    "is_recommended": false, 
+                    "id": 17, 
+                    "prereq_id": 77
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/170", 
+            "id": 7, 
+            "department_id": 2
+        }, 
+        {
+            "name": "172", 
+            "type_id": 4, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 8, 
+                    "is_recommended": false, 
+                    "id": 18, 
+                    "prereq_id": 7
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/172", 
+            "id": 8, 
+            "department_id": 2
+        }, 
+        {
+            "name": "174", 
+            "type_id": 4, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 9, 
+                    "is_recommended": false, 
+                    "id": 19, 
+                    "prereq_id": 7
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/174", 
+            "id": 9, 
+            "department_id": 2
+        }, 
+        {
+            "name": "176", 
+            "type_id": 4, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 394, 
+                    "is_recommended": false, 
+                    "id": 20, 
+                    "prereq_id": 7
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/176", 
+            "id": 394, 
+            "department_id": 2
+        }, 
+        {
+            "name": "184", 
+            "type_id": 5, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 10, 
+                    "is_recommended": false, 
+                    "id": 21, 
+                    "prereq_id": 75
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/184", 
+            "id": 10, 
+            "department_id": 2
+        }, 
+        {
+            "name": "186", 
+            "type_id": 5, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 11, 
+                    "is_recommended": false, 
+                    "id": 22, 
+                    "prereq_id": 75
+                }, 
+                {
+                    "course_id": 11, 
+                    "is_recommended": false, 
+                    "id": 23, 
+                    "prereq_id": 76
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/186", 
+            "id": 11, 
+            "department_id": 2
+        }, 
+        {
+            "name": "188", 
+            "type_id": 5, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 12, 
+                    "is_recommended": false, 
+                    "id": 24, 
+                    "prereq_id": 75
+                }, 
+                {
+                    "course_id": 12, 
+                    "is_recommended": false, 
+                    "id": 25, 
+                    "prereq_id": 77
+                }, 
+                {
+                    "course_id": 12, 
+                    "is_recommended": true, 
+                    "id": 26, 
+                    "prereq_id": 7
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/188", 
+            "id": 12, 
+            "department_id": 2
+        }, 
+        {
+            "name": "189", 
+            "type_id": 5, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 13, 
+                    "is_recommended": false, 
+                    "id": 27, 
+                    "prereq_id": 12
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/189", 
+            "id": 13, 
+            "department_id": 2
+        }, 
+        {
+            "name": "152", 
+            "type_id": 2, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 2, 
+                    "is_recommended": false, 
+                    "id": 4, 
+                    "prereq_id": 76
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/152", 
+            "id": 2, 
+            "department_id": 2
+        }, 
+        {
+            "name": "168", 
+            "type_id": 3, 
+            "bias_x": 0, 
+            "bias_y": 0, 
+            "depth": 3.0, 
+            "prereqs": [
+                {
+                    "course_id": 418, 
+                    "is_recommended": false, 
+                    "id": 63, 
+                    "prereq_id": 75
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/168", 
+            "id": 418, 
+            "department_id": 2
+        }, 
+        {
+            "name": "191", 
+            "type_id": 4, 
+            "bias_x": 60, 
+            "bias_y": 0, 
+            "depth": 4.0, 
+            "prereqs": [
+                {
+                    "course_id": 260, 
+                    "is_recommended": false, 
+                    "id": 59, 
+                    "prereq_id": 7
+                }
+            ], 
+            "link": "/coursesurveys/course/CS/191", 
+            "id": 260, 
+            "department_id": 2
+        }
+    ]
+}

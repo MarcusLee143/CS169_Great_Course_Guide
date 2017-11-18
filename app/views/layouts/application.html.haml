@@ -2,13 +2,14 @@
 %html
   %head
     %title Great Course Guide
-
+    = stylesheet_link_tag '/stylesheets/jquery-ui'
     = stylesheet_link_tag '/stylesheets/materialize'
     = stylesheet_link_tag '/stylesheets/animate.min'
     = stylesheet_link_tag '/stylesheets/awesomplete'
     = stylesheet_link_tag '/stylesheets/sweetalert'
     %link{href: "https://fonts.googleapis.com/icon?family=Material+Icons", rel: "stylesheet"}
     = javascript_include_tag '/javascripts/jquery.js'
+    = javascript_include_tag '/javascripts/jquery-ui.js'
     = csrf_meta_tags
 
   %body.grey.lighten-3
@@ -24,6 +25,8 @@
             %a{href: "/courses"} All Courses
           %li
             %a{href: "/edit"} Edit Courses
+          %li
+            %a{href: "/courses/compare"} Compare Courses
         %nav.blue.darken-4
           .nav-wrapper.container
             %a.brand-logo{href: "/welcome"} Great Course Guide
@@ -65,6 +68,8 @@
                           %a{href: "/courses"} All Courses
                         %li.bold.no-padding
                           %a{href: "/edit"} Edit Courses
+                        %li.bold.no-padding
+                          %a{href: "/courses/compare"} Compare Courses
               %li.bold.no-padding
                 %ul.collapsible.collapsible-accordion
                   %li.bold.no-padding

@@ -34,7 +34,7 @@ class CoursesController < ApplicationController
       @ignore = "ignoring prerequisites"
       @ignore_flag = true
     end
-    @recommended_EECS_courses = @user.recommended_EECS_courses
+    @recommended_EECS_courses = @user.recommended_EECS_courses(@ignore_flag)
     @fall_length = @recommended_EECS_courses[:possible_fall].length + @recommended_EECS_courses[:backup_fall].length
     @spring_length = @recommended_EECS_courses[:possible_spring].length + @recommended_EECS_courses[:backup_spring].length
     @recommended_breadth_courses = @user.recommended_breadth_courses

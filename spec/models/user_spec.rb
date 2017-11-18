@@ -198,12 +198,64 @@ describe User do
     end
     context "check if user can take the class" do
       it "should return true if user can take the course" do
-        expect(@user.can_take("C")).to eq(true)
+        expect(@user.can_take("C",false)).to eq(true)
       end
       it "should return false if user cannot take the course" do
-        expect(@user.can_take("A")).to eq(false)
-        expect(@user.can_take("B")).to eq(false)
-        expect(@user.can_take("D")).to eq(false)
+        expect(@user.can_take("A",false)).to eq(false)
+        expect(@user.can_take("B",false)).to eq(false)
+        expect(@user.can_take("D",false)).to eq(false)
+        expect(@user.can_take("A",true)).to eq(false)
+        expect(@user.can_take("B",true)).to eq(false)
+        expect(@user.can_take("C",true)).to eq(true)
+        expect(@user.can_take("D",true)).to eq(true)
+      end
+    end
+
+    ### NEW 
+    # context "check if user can take the class if prereqs are ignored" do
+    #   it "should return true regardless if user can take the course" do
+    #     # set the ignore flag to true
+    #     expect(@user.recommended_EECS_courses(true)).to eq({:possible_fall=>[], :backup_fall=>[], :possible_spring=>[], :backup_spring=>[]})
+    #     expect(@user.can_take("A",true)).to eq(false)
+    #     expect(@user.can_take("B",true)).to eq(true)
+    #     expect(@user.can_take("C",true)).to eq(true)
+    #     expect(@user.can_take("D",true)).to eq(true)
+    #   end
+    # end
+    ### END
+  end
+
+  describe "Schedule recommendations" do
+    before :each do
+      User.destroy_all
+      Course.destroy_all
+      Professor.destroy_all
+      UserCourse.destroy_all
+      ProfessorCourse.destroy_all
+      @test_user = User.create(first_name: "Test", last_name: "Test", uid: "123456", email: "Test@test.test")
+      @a = Course.create(number: "A", title: "TestA")
+      @b = Course.create(number: "B", title: "TestB")
+      @c = Course.create(number: "C", title: "TestC")
+      @prof1 = Professor.create(name: "Prof1")
+      @prof2 = Professor.create(name: "Prof2")
+      @prof3 = Professor.create(name: "Prof3")
+      @prof1.courses.create(number: "A", name: "TestA", rating: 4.0, term: "SP16")
+      @prof2.courses.create(number: "B", name: "TestB", rating: 3.0, term: "SP16")
+      @prof3.courses.create(number: "C", name: "TestC", rating: 7.0, term: "SP16")
+      @test_user.user_courses.create(number: "A", title: "TestA", taken: false)
+      # @user.user_courses.create(number: "B", title: "TestB", taken: false)
+      # @user.user_courses.create(number: "C", title: "TestC", taken: false)
+      @draft_course_a = @a.draft_courses.create(professor: "Prof1", term: "FA16")
+      @draft_course_b = @b.draft_courses.create(professor: "Prof2", term: "FA16")
+      @draft_course_c = @c.draft_courses.create(professor: "Prof3", term: "FA16")
+      @recommended_EECS_courses = @test_user.recommended_EECS_courses(false) # @ignore_flag = false
+    end
+    context "check the correct classes are recommended" do
+      it "should recommend classes with better ratings" do
+        expect(@recommended_EECS_courses[:backup_fall].select{|c| c[0].title == "TestC"}).not_to be_empty
+      end
+      it "should not recommend classes with worse ratings" do
+        expect(@recommended_EECS_courses[:backup_fall].select{|c| c[0].title == "TestB"}).to be_empty
       end
     end
   end

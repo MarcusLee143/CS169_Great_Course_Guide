@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   # Professors
   resources :professors, only: [:index, :show] do
+    get :all, :on => :collection
     get :distinguished, :on => :collection
   end
 
@@ -26,5 +27,6 @@ Rails.application.routes.draw do
   resources :courses, only: [:index, :show] do
     get :all, :on => :collection
     get :schedule, :on => :collection
+    get :compare, :on => :collection
   end
 end
