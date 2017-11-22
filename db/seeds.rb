@@ -7,6 +7,7 @@ ProfessorCourse.destroy_all
 Course.destroy_all
 Award.destroy_all
 DraftCourse.destroy_all
+BtFilter.destroy_all
 
 distinguishedProfs = Hash.new
 CSV.foreach('data/awards.csv') do |line|
@@ -104,5 +105,5 @@ end
 newest_run = 'data/run_2017-11-03_17_33_48/bt_filter.json'
 filter_data_hash = JSON.parse(File.read(newest_run))
 filter_data_hash.each do |key, hash|
-  BtFilter.create(filter: key, category: hash['category'], filter_id: hash['filter_id'])
+  BtFilter.create(filter: key, category: hash['category'], filter_id: hash['id'])
 end

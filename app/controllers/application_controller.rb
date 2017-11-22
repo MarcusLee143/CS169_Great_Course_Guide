@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   # Filter Needed for CalNet Login
   before_filter CASClient::Frameworks::Rails::Filter
-  before_action :require_info, :except => [:welcome, :all, :emails, :create, :verify]
+  before_action :require_info, :except => [:welcome, :all, :emails, :create, :verify, :filter]
   before_action :get_info, :except => :create
 
   def require_info
