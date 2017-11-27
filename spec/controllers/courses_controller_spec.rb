@@ -1,5 +1,6 @@
 require "spec_helper"
 require "rails_helper"
+require "json"
 
 describe CoursesController do
 
@@ -65,4 +66,48 @@ describe CoursesController do
       expect(assigns(:fall_length)).to eq(2)
     end
   end
+
+  describe 'Querying filter REST endpoint' do
+    before :each do
+      BtFilter.destroy_all
+      @default_filter = BtFilter.create(filter: 'default', category: 'default', filter_id: '1,2,3,4')
+      @filter1 = BtFilter.create(filter: 'Filter1', category: 'Category1', filter_id: '1')
+      @filter2 = BtFilter.create(filter: 'Filter2', category: 'Category1', filter_id: '2')
+      @filter3 = BtFilter.create(filter: 'Filter3', category: 'Category2', filter_id: '3')
+      @expected_default = {
+          'filter' => 'default',
+          'category' => 'default',
+          'filter_id' => '1,2,3,4'
+      }
+      @expected1 = {
+          'filter' => 'Filter1',
+          'category' => 'Category1',
+          'filter_id' => '1'
+      }
+      @expected2 = {
+          'filter' => 'Filter2',
+          'category' => 'Category1',
+          'filter_id' => '2'
+      }
+      @expected3 = {
+          'filter' => 'Filter3',
+          'category' => 'Category2',
+          'filter_id' => '3'
+      }
+    end
+    it 'should load the correct number of filters for one category with multiple filters' do
+      get :filter, {:category => 'Category1'}
+      tmp = JSON.parse(response.body.to_s)
+      expect(tmp).to include(@expected_default)
+      expect(tmp).to include(@expected1)
+      expect(tmp).to include(@expected2)
+    end
+    it 'should load the correct number of filters for one category with one filter' do
+      get :filter, {:category => 'Category2'}
+      tmp = JSON.parse(response.body.to_s)
+      expect(tmp).to include(@expected_default)
+      expect(tmp).to include(@expected3)
+    end
+  end
+
 end
