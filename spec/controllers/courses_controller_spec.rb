@@ -108,6 +108,14 @@ describe CoursesController do
       expect(tmp).to include(@expected_default)
       expect(tmp).to include(@expected3)
     end
+    it 'should call filter category function if given a category query parameter' do
+      expect(controller).to receive(:filter_category).with('Category1')
+      get :filter, {:category => 'Category1'}
+    end
+    it 'should call filter filter function if given a filter query parameter' do
+      expect(controller).to receive(:filter_filter).with('Filter1')
+      get :filter, {:filter => 'Filter1'}
+    end
   end
 
 end
