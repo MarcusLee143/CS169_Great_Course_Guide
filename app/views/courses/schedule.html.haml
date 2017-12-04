@@ -1,4 +1,14 @@
 .container.animated.mainContent
+  .row-toggle
+    .col.s12
+      .card.white
+        .text #{@ignore}
+        - if @ignore_flag
+          %a{:href => "/courses/schedule", :id => "dont ignore"} 
+            Don't Ignore Prerequisites
+        - else
+          %a{:href => "/courses/schedule?ignore=true", :id => "ignore"}
+            Ignore Prerequisites 
   .row
     .col.l6.m12
       .card.white.medium
@@ -32,7 +42,12 @@
                         = link_to(professor.name, professor_path(professor.id))
                       - else
                         = link_to(professor.name, professor_path(professor.id)) + ", "
-                  %td= course[2]
+                  %td 
+                    - course[2].each do |rating|
+                      - if course[2].index(rating) + 1 == course[2].length # I'm so sorry
+                        = rating.to_s
+                      - else
+                        = rating.to_s + ", "
                   %td.vertical-align
                     %input{type: "checkbox", class: "filled-in takenBox", id: "add-#{course[0].number}", name: "taking_classes[#{course[0].number}: #{course[0].title}]"}
                     %label{for: "add-#{course[0].number}"}
@@ -59,7 +74,12 @@
                         = link_to(professor.name, professor_path(professor.id))
                       - else
                         = link_to(professor.name, professor_path(professor.id)) + ", "
-                  %td= course[2]
+                  %td 
+                    - course[2].each do |rating|
+                      - if course[2].index(rating) + 1 == course[2].length
+                        = rating.to_s
+                      - else
+                        = rating.to_s + ", "
                   %td.vertical-align
                     %input{type: "checkbox", class: "filled-in takenBox", id: "add-#{course[0].number}", name: "taking_classes[#{course[0].number}: #{course[0].title}]"}
                     %label{for: "add-#{course[0].number}"}
@@ -95,7 +115,12 @@
                         = link_to(professor.name, professor_path(professor.id))
                       - else
                         = link_to(professor.name, professor_path(professor.id)) + ", "
-                  %td= course[2]
+                  %td 
+                    - course[2].each do |rating|
+                      - if course[2].index(rating) + 1 == course[2].length
+                        = rating.to_s
+                      - else
+                        = rating.to_s + ", "
           %br
           .chip.center-div The Best Alternative Courses
           %table.centered.highlight
@@ -116,24 +141,27 @@
                         = link_to(professor.name, professor_path(professor.id))
                       - else
                         = link_to(professor.name, professor_path(professor.id)) + ", "
-                  %td= course[2]
+                  %td 
+                    - course[2].each do |rating|
+                      - if course[2].index(rating) + 1 == course[2].length # I'm so sorry
+                        = rating.to_s
+                      - else
+                        = rating.to_s + ", "
         .center-align.card-action-small.card-action
           %i.material-icons.small.animated-slow.tada.infinite arrow_drop_down
-  .row
-    .col.s12
-      .card.white
-        .text #{@ignore}
-        - if @ignore_flag
-          %a{:href => "/courses/schedule", :id => "dont ignore"} 
-            Dont Ignore Prerequisites
-        - else
-          %a{:href => "/courses/schedule?ignore=true", :id => "ignore"}
-            Ignore Prerequisites 
+
   .row
     .col.s12
       .card.white.medium
         .card-content.scrollable
           %span.card-title Recommended Fall 2016 Non-EECS Courses Taught by Distinguished Professors
+          %br
+          %span.card-subtitle
+            .text{:style => 'display: inline-block'} Distiguished Teaching Award:
+            %i.material-icons.center.amber-text{:style => 'display: inline-block; vertical-align: middle'} star
+            %br
+            .text{:style => 'display: inline-block'} Other Awards:
+            %i.material-icons.center.blue-text{:style => 'display: inline-block; vertical-align: middle'} star
           - if @spring_length == 0
             %br
             No classes taught by a distinguished humanities professor the next semester.
@@ -144,10 +172,17 @@
                 %th{"data-field": "name"} Course
                 %th{"data-field": "title"} Title
                 %th{"data-field": "professor"} Professor
+                %th{"data-field": "awards_tier"} Awards Tier
             %tbody
               - @recommended_breadth_courses.each do |course|
                 %tr
                   %td= course[0]
                   %td= course[1]
                   %td= course[2]
+                  - if course[3] == "High"
+                    %td{:class => "tier_star", :id => "gold_star"}
+                      %i.material-icons.center.amber-text star
+                  - else
+                    %td{:class => "tier_star", :id => "blue_star"}
+                      %i.material-icons.center.blue-text star
 = javascript_include_tag '/javascripts/schedule.js'

@@ -27,11 +27,11 @@ class CoursesController < ApplicationController
   end
 
   def schedule
-    @ignore = "not ignoring prerequisites"
+    @ignore = "Click to Ignore Prerequisites"
     @ignore_flag = false
     ignore = params[:ignore]
     if !ignore.nil?
-      @ignore = "ignoring prerequisites"
+      #@ignore = "ignoring prerequisites"
       @ignore_flag = true
     end
     @recommended_EECS_courses = @user.recommended_EECS_courses(@ignore_flag)

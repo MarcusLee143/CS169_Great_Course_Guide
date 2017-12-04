@@ -40,5 +40,24 @@ $(function() {
         }
       });
   }
+
+  function validate_input(input_string) {
+    if ($.inArray(input_string, all_courses_options) == -1) {
+      alert("That isn't a valid class.");
+      return false;
+    }
+    return true;
+  }
+
+  $("#add-interested-course").submit(function() {
+    let input_string = $('interested-course-search').val();
+    return validate_input(input_string);
+  });
+  $("#add-taken-course").submit(function() {
+    console.log("SwS");
+    let input_string = $('taken-course-search').val();
+    return validate_input(input_string);
+  });
+  
 });
 

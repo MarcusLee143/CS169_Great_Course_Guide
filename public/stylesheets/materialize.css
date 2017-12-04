@@ -6689,6 +6689,12 @@ nav ul a span.badge {
   padding-top: 0;
 }
 
+.row-toggle {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
+
 .row {
   margin-left: auto;
   margin-right: auto;

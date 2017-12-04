@@ -68,6 +68,7 @@ $(document).ready(function () {
     $('#professor-search').val("");
 
     if (!validate_inputs(selected_professor_name, selected_course_name)) {
+      $('#data-loader').hide();
       return;
     }
 

@@ -92,9 +92,10 @@ class User < ActiveRecord::Base
       
       # for filtering out "Best Alternative Courses" who's ratings are lower than "Courses You're Interested In"
       # the overall rating for the professors teaching a course is stored in the [2] index of a course;
-      if not semester[:possible_courses].blank?
-        min_interested_rating = semester[:possible_courses].min_by {|x| x[2].to_f}[2].to_f
-        semester[:backup_courses] = semester[:backup_courses].select{|a| a[2].to_f > min_interested_rating}
+      if not semester[:possible_courses].blank? and not ignore_flag
+        min_interested_rating = semester[:possible_courses].min_by {|x| x[2]}[2]  
+        min_interested_rating = min_interested_rating.min
+        semester[:backup_courses] = semester[:backup_courses].select{|a| a[2][0] > min_interested_rating}
       end
     end
     
@@ -109,7 +110,8 @@ class User < ActiveRecord::Base
     distinguished_fall_breadth_courses = []
     fall_breadth_courses.each do |course|
       professor = Professor.find_by(name: course[2])
-      if professor and professor.distinguished
+      if professor and professor.awarded
+        course[3] = if professor.distinguished then "High" else "Low" end
         distinguished_fall_breadth_courses << course
       end
     end
@@ -117,48 +119,26 @@ class User < ActiveRecord::Base
     return distinguished_fall_breadth_courses
   end
 
-  protected
-  def get_average_rating_of_professors(professors)
-    total = 0
-    num_professors = 0
-    professors.each do |name|
-      if name == "TBA"
-        next
-      end
-      professor = Professor.find_by(name: name)
-      if professor
-        if professor.rating and professor.rating != "*"
-          total += professor.rating
-          num_professors += 1
-        end
-      else
-        next
-      end
-    end
-    return num_professors > 0 ? (total / num_professors).round(2) : "*"
-  end
-
   def get_course_data(course_list, term_list)
     course_list.map! { |course_number| [Course.find_by(number: course_number),
-              term_list[course_number].split(";"),
-              get_average_rating_of_professors(term_list[course_number].split(";"))] }
+              term_list[course_number].split(";")]}
+              #get_average_rating_of_professors(term_list[course_number].split(";"))] }
     course_list.each do |data|
       new_professors = []
+      prof_ratings = []
       data[1].each do |professor_name|
-        professor = Professor.find_by(name: professor_name)
-        if professor
-          new_professors << professor
+        prof = Professor.find_by(name: professor_name)
+        if prof
+          new_professors << prof
+          if prof.rating == '*'
+            prof_ratings << 0
+          else
+            prof_ratings << prof.rating
+          end
         end
       end
       data[1] = new_professors
-    end
-
-    course_list.sort_by! do |data|
-      if data[2] == "*"
-        0
-      else
-        -data[2]
-      end
+      data[2] = prof_ratings
     end
   end
 end

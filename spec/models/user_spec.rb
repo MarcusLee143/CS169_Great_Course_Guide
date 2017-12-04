@@ -204,6 +204,8 @@ describe User do
         expect(@user.can_take("A",false)).to eq(false)
         expect(@user.can_take("B",false)).to eq(false)
         expect(@user.can_take("D",false)).to eq(false)
+      end
+      it "should return true if ignore flag is toggled and hasn't taken yet" do
         expect(@user.can_take("A",true)).to eq(false)
         expect(@user.can_take("B",true)).to eq(false)
         expect(@user.can_take("C",true)).to eq(true)
@@ -223,6 +225,40 @@ describe User do
     #   end
     # end
     ### END
+  end
+
+  describe "Mulitple Professor Ratings" do
+    before (:each) do
+      Professor.destroy_all
+      UserCourse.destroy_all
+      ProfessorCourse.destroy_all
+      User.destroy_all
+      Course.destroy_all
+      Prereq.destroy_all
+
+      @user = User.create(first_name: "John", last_name: "Doe", uid: "000", email: "jd@jd.com")
+      @user.user_courses.create(number: "A", title: "TestA", taken: false)
+
+      @a = Course.create(number: "A", title: "TestA")
+
+      @prof1 = Professor.create(name: "Prof1")
+      @prof1.professor_courses.create(number: "A", name: "TestA", rating: 5.5, term: "Fall 2014")
+      @prof2 = Professor.create(name: "Prof2")
+      @prof2.professor_courses.create(number: "A", name: "TestA", rating: 7.0, term: "Fall 2014")
+
+      #@draft_course_a = @a.draft_courses.create(professor: "Prof1", term: "FA16")
+      #@draft_course_b = @b.draft_courses.create(professor: "Prof2", term: "FA16")
+      @recommended_EECS_courses = @user.recommended_EECS_courses(false) # @ignore_flag = false
+      @get_course_data = @user.get_course_data(['CS170'], 'CS170'=>'Prof1;Prof2')
+
+    end
+    context "Display rating of both professors" do
+      it "should return both ratings" do
+        allow(@user).to receive(:recommended_EECS_courses)
+        allow(@user).to receive(:get_course_data).with(['CS170'], 'CS170'=>'Prof1;Prof2')
+        expect(@get_course_data[0][2]).to eq([5.5,7.0])
+      end
+    end
   end
 
   describe "Schedule recommendations" do
@@ -256,6 +292,36 @@ describe User do
       end
       it "should not recommend classes with worse ratings" do
         expect(@recommended_EECS_courses[:backup_fall].select{|c| c[0].title == "TestB"}).to be_empty
+      end
+    end
+  end
+
+  describe "Distinguishing different non-EECS awards" do
+    before :each do
+      User.destroy_all
+      Professor.destroy_all
+      ProfessorCourse.destroy_all
+      @test_user = User.create(first_name: "Test", last_name: "Test", uid: "123456", email: "Test@test.test")
+     
+      @professor1 = Professor.create(name: "Junko Habu", distinguished: true, distinguishedYear: 2016, category: "HUM", awarded: true)
+      @professor2 = Professor.create(name: "Xin Liu", distinguished: false, category: "HUM", awarded: false)
+      @professor3 = Professor.create(name: "Angela Marino", distinguished: false, category: "HUM", awarded: true)
+      @course1 = ProfessorCourse.create(number: "ANTHROC125A", name: "Art", rating: 2, term: "FA16")
+      @course2 = ProfessorCourse.create(number: "ANTHRO189", name: "Music", rating: 2, term: "FA16")
+      @course3 = ProfessorCourse.create(number: "THEATER26", name: "Dance", rating: 4, term: "FA16")
+      @professor1.professor_courses << @course1
+      @professor2.professor_courses << @course2
+      @professor3.professor_courses << @course3
+      
+      @recommended_breadth_courses = @test_user.recommended_breadth_courses
+      @courses_to_match = @recommended_breadth_courses.join(",")
+    end
+    context "recommend non-EECS courses" do
+      it "should recommend courses from distinguished professors" do
+        expect(@courses_to_match).to match(/ANTHROC125A/)
+      end
+      it "should recommend courses from awarded, non-distinguished professors" do
+        expect(@courses_to_match).to match(/THEATER26/)
       end
     end
   end

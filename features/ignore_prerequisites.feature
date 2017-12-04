@@ -38,6 +38,7 @@ Scenario: Ignore Prerequisties is selected
   When I follow "Schedule"
   And I follow "Ignore Prerequisites"
   Then I should see ignore in the url
+  Then I should see "Click to Ignore Prerequisites"
   Then I should see "CS169"
   Then I should see "CS170"
   Then I should see "Cup"

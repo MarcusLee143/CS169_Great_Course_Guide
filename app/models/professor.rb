@@ -31,7 +31,7 @@ class Professor < ActiveRecord::Base
 		profs = []
 		self.where(category: type).each do |prof|
       if not prof.name == "TBA"
-			 profs << {id: prof.id, name: prof.name, rating: prof.rating}
+			  profs << {id: prof.id, name: prof.name, rating: prof.rating}
       end
 		end
     profs.sort_by do |prof|
@@ -86,9 +86,3 @@ class Professor < ActiveRecord::Base
     return self.where(category: "HUM", awarded: true)
   end
 end
-
-
-
-
-
-

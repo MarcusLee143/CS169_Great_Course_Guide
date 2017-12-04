@@ -60,7 +60,7 @@ describe CoursesController do
       expect(response).to render_template :schedule
     end
     it "should have the correct rating threshold" do
-      expect(assigns(:recommended_EECS_courses)[:possible_fall].min_by {|x| x[2]}[2]).to eq(4.0)
+      expect(assigns(:recommended_EECS_courses)[:possible_fall].min_by {|x| x[2]}[2][0]).to eq(4.0)
     end
     it "should contain correct number of suggested courses" do
       expect(assigns(:fall_length)).to eq(2)
